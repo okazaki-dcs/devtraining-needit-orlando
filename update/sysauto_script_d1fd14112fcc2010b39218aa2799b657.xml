@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Find and Close Long Overdue NeedIt Tasks</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2020-10-23 02:44:04</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[// アプリケーションプロパティの値を取得
+var howLongToClose = gs.getProperty('x_58872_needit.autoCloseOverdue');
+
+// Close the NeedIt Tasks and update the NeedIt Task Work notes.
+var overdueNITasks = new GlideRecord('x_58872_needit_needit_task');
+// アプリケーションプロパティで設定された日数より古い期日
+overdueNITasks.addQuery('due_date', '<=', gs.daysAgo(howLongToClose));
+// Open or Work In Progress
+overdueNITasks.addQuery('state', '<', 3);
+// 取得
+overdueNITasks.query();
+
+while (overdueNITasks.next()) {
+  // 延滞しているNeedItタスクレコード毎のログメッセージ
+  gs.info("自動的に完了にしたNeedItタスクレコード = " + overdueNITasks.number);
+  // 作業メモ追加
+  overdueNITasks.work_notes = "期日を過ぎた為、完了に変更されました。";
+  // Close Incomplete
+  overdueNITasks.state = 4;
+  // 更新
+  overdueNITasks.update();
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 02:55:55</sys_created_on>
+        <sys_id>d1fd14112fcc2010b39218aa2799b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Find and Close Long Overdue NeedIt Tasks</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sysauto_script_d1fd14112fcc2010b39218aa2799b657</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 02:55:55</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
