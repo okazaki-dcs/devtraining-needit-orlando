@@ -30,7 +30,7 @@ NeedItリクエストを承認して実行する手順。</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>10a018472fca5010b39218aa2799b6c6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>NeedIt Fulfillment</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -38,7 +38,7 @@ NeedItリクエストを承認して実行する手順。</description>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_hub_flow_10a018472fca5010b39218aa2799b6c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-07-21 02:12:08</sys_updated_on>
+        <sys_updated_on>2020-11-04 07:22:47</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=10a018472fca5010b39218aa2799b6c6"/>
@@ -456,11 +456,11 @@ NeedItリクエストを承認して実行する手順。</description>
         <sys_created_on>2020-07-21 02:12:07</sys_created_on>
         <sys_id>c53198472fca5010b39218aa2799b610</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_10a018472fca5010b39218aa2799b6c6_current_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-07-21 02:12:07</sys_updated_on>
         <url/>
@@ -479,11 +479,11 @@ NeedItリクエストを承認して実行する手順。</description>
         <sys_created_on>2020-07-21 02:12:07</sys_created_on>
         <sys_id>cd31dc472fca5010b39218aa2799b6d0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_10a018472fca5010b39218aa2799b6c6_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-07-21 02:12:07</sys_updated_on>
         <url/>
